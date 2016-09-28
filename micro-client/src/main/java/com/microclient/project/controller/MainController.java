@@ -19,20 +19,20 @@ public class MainController {
 
 	@Autowired
 	private UserService userService;
-	
+
 	@Async
-	public Future<ResponseEntity<?>> getUserAsync() throws InterruptedException {	
-		//Thread.sleep(1000);
+	public Future<ResponseEntity<?>> getUserAsync() throws InterruptedException {
+		// Thread.sleep(1000);
 		return new AsyncResult<ResponseEntity<?>>(userService.getAllUser());
 	}
-		
+
 	@RequestMapping(value = "getusers", method = RequestMethod.GET)
-	public ResponseEntity<?> getService(){
+	public ResponseEntity<?> getService() {
 		return new ResponseEntity<>(userService.getAllUser(), HttpStatus.OK);
 	}
-	
+
 	@RequestMapping(value = "isexist", method = RequestMethod.GET)
-	public ResponseEntity<?> isExist(){
+	public ResponseEntity<?> isExist() {
 		return new ResponseEntity<>(HttpStatus.OK);
-	} 
+	}
 }
