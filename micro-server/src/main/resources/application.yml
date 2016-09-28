@@ -1,0 +1,16 @@
+server:
+  port: 1000
+  
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+  
+#logging:
+#  level:
+#    com:
+#      netflix:
+#        eureka: OFF
+#        discovery: OFF

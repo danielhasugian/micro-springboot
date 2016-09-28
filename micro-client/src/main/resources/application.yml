@@ -1,0 +1,11 @@
+server:
+  port: 3000
+  
+spring:
+  application:
+    name: micro-client
+    
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${vcap.services.eureka-service.credentials.uri:http://localhost:1000}/eureka/
